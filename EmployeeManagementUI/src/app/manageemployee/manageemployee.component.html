@@ -1,0 +1,59 @@
+<p>Manage Employee information!!!</p>
+
+<form (ngSubmit)="submitData()">
+  <table>
+    <tbody>
+      <tr>
+        <td> <label>First Name</label></td>
+        <td>
+          <input type="text" name="firstname" [(ngModel)]="model.firstName" placeholder="FirstName" />
+        </td>
+      </tr>
+      <tr>
+        <td><label>Last Name</label></td>
+        <td>
+          <input type="text" name="lastname" [(ngModel)]="model.lastName" placeholder="LastName" />
+        </td>
+      </tr>
+      <tr>
+        <td><label>Employee Number</label></td>
+        <td>
+          <input type="number" name="employeenumber" [(ngModel)]="model.employeeNumber" placeholder="EmployeeNumber" />
+        </td>
+      </tr>
+      <tr>
+        <td style="column-span:all"> <button type="submit">Create/Update</button></td>
+        
+      </tr>
+    </tbody>
+  </table>
+ 
+   <br /> 
+   <br />
+</form>
+<br />
+<br />
+<br />
+
+<table class="table" *ngIf="employees">
+  <thead>
+    <tr>
+      <th class="th">First Name</th>
+      <th class="th">Last Name</th>
+      <th class="th">Employee Number</th>
+      <th class="th">Edit</th>
+      <th class="th">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td class="td">{{ employee.firstName }}</td>
+      <td class="td">{{ employee.lastName }}</td>
+      <td class="td">{{ employee.employeeNumber }}</td>
+      <td class="td"><input type="submit" (click)="getEmployee(employee)" value="Edit" /></td>
+      <td class="td"><input type="submit" (click)="delete(employee)" value="Delete" /></td>
+      <!--<td><a (click)="getEmployee(employee)">Edit</a></td>
+      <td><a href="" (click)="delete(employee)">Delete</a></td>-->
+    </tr>
+  </tbody>
+</table>
