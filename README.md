@@ -11,5 +11,5 @@ EmployeeManagementAPI (.NET Core Web API):
 EmployeeManagementUI (Angular):
 
 1. Navigate to the folder in command line and run "npm install". This will install al the prerequisites for the project.
-1. update the baseUrl in EmployeeService.ts which is copied from API.
+1. update the baseUrl in employee.service.ts which is copied from API.
 2. Run the application(ng serve).
