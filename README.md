@@ -13,3 +13,9 @@ EmployeeManagementUI (Angular):
 1. Navigate to the folder in command line and run "npm install". This will install al the prerequisites for the project.
 1. update the baseUrl in employee.service.ts which is copied from API.
 2. Run the application(ng serve).
+
+
+
+For errors related to CORS:
+Add chrome extension to allow cors: toggle ON to allow CORS.
+https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf/related
